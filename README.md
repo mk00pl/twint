@@ -7,5 +7,5 @@ Temporary working version of [original twint project](github.com/twintproject/tw
 To install, simply use pip.
 
 ```
-pip3 install --user git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+pip3 install --user git+https://github.com/mk00pl/twint.git@origin/master#egg=twint
 ```
