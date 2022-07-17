@@ -21,7 +21,7 @@ def error(_error, message):
     """ Print errors to stdout
     """
     print("[-] {}: {}".format(_error, message))
-    sys.exit(0)
+    sys.exit(1)
 
 
 def check(args):
@@ -265,6 +265,10 @@ def options():
 def main():
     """ Main
     """
+    if sys.version_info.major < 3  or (sys.version_info.major == 3 and sys.version_info.minor < 6):
+        error("Invalid Python version", 
+              f"3.6+ required, {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro} installed")
+    
     args = options()
     check(args)
 
@@ -331,10 +335,7 @@ def main():
 
 
 def run_as_command():
-    if sys.version_info.major < 3  or (sys.version_info.major == 3 and sys.version_info.minor < 6):
-        raise error
-    else:
-        main()
+    main()
 
 if __name__ == '__main__':
     main()
