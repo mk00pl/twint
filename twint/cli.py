@@ -331,9 +331,11 @@ def main():
 
 
 def run_as_command():
-    #muh version check
-    main()
-
+    if sys.version_info.major >= 3 and sys.version_info.minor >= 6:
+            print("[-] TWINT requires Python version 3.6+.")
+            exit()
+    else:
+        main()
 
 if __name__ == '__main__':
     main()
