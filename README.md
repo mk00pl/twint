@@ -46,12 +46,6 @@ git clone --depth=1 https://github.com/mk00pl/twint.git
 cd twint
 pip3 install . -r requirements.txt
 ```
-
-**Pip:**
-```bash
-pip3 install twint
-```
-
 or
 
 ```bash
